@@ -37,6 +37,6 @@ gulp.task('webserver', function() {
       }));
   });
 
-gulp.task("default", gulp.series(["copy-html", "webserver"], bundle));
+gulp.task("default", gulp.series('copy-html', gulp.parallel(bundle, "webserver")));
 watchedBrowserify.on("update", bundle);
 watchedBrowserify.on("log", gutil.log);
