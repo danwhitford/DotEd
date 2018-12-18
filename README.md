@@ -6,4 +6,4 @@
 
 `gulp`
 
-This should create an `index.html` inside the `dist` folder.
+This should open a web browser pointed at `localhost:8000`.
