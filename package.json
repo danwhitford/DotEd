@@ -26,7 +26,7 @@
     "url": "git+https://github.com/shaftoe44/DotEd.git"
   },
   "author": "Daniel Whitford",
-  "license": "ISC",
+  "license": "GPLv3",
   "bugs": {
     "url": "https://github.com/shaftoe44/DotEd/issues"
   },
