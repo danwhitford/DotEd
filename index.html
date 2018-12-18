@@ -26,41 +26,6 @@ dinetwork {
     </textarea>
     <div id="mynetwork"></div>
 
-<script type="text/javascript">
-
-    function make_graph(DOTstring) {
-        console.log(DOTstring)
-        var parsedData = vis.network.convertDot(DOTstring);
-
-        var data = {
-        nodes: parsedData.nodes,
-        edges: parsedData.edges
-        }
-
-        var options = parsedData.options;
-
-        // you can extend the options like a normal JSON variable:
-        options.nodes = {
-            color: 'red'
-        }
-
-        // create a network
-        var container = document.getElementById('mynetwork');
-        var network = new vis.Network(container, data, options);
-    }
-
-    function update(ev) {
-        const DOTstring = ev.target.value;
-        make_graph(DOTstring);
-    }
-
-    window.onload = function() {
-        const mytext = document.getElementById('mytext');
-        mytext.oninput = update;
-        make_graph(mytext.value);
-    }
-
-</script>
+    <script type="text/javascript" src="doted.js"></script>
 </body>
 </html>
-
