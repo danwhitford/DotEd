@@ -1,0 +1,66 @@
+<html>
+<head>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+
+    <style type="text/css">
+        #mynetwork {
+            width: 600px;
+            height: 400px;
+            border: 1px solid lightgray;
+            display: inline-block;
+        }
+        #mytext {
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOT editor</h1>
+    <textarea id='mytext' cols="80" autofocus autocomplete="false" spellcheck="false">
+dinetwork {
+    "Acquire credentials" -> "Drop the database";
+    "Exploit SQLi" -> "Drop the database"
+    "Scan forms for SQLi" -> "Exploit SQLi"
+}            
+    </textarea>
+    <div id="mynetwork"></div>
+
+<script type="text/javascript">
+
+    function make_graph(DOTstring) {
+        console.log(DOTstring)
+        var parsedData = vis.network.convertDot(DOTstring);
+
+        var data = {
+        nodes: parsedData.nodes,
+        edges: parsedData.edges
+        }
+
+        var options = parsedData.options;
+
+        // you can extend the options like a normal JSON variable:
+        options.nodes = {
+            color: 'red'
+        }
+
+        // create a network
+        var container = document.getElementById('mynetwork');
+        var network = new vis.Network(container, data, options);
+    }
+
+    function update(ev) {
+        const DOTstring = ev.target.value;
+        make_graph(DOTstring);
+    }
+
+    window.onload = function() {
+        const mytext = document.getElementById('mytext');
+        mytext.oninput = update;
+        make_graph(mytext.value);
+    }
+
+</script>
+</body>
+</html>
+
