@@ -4,6 +4,9 @@
 
 body {
     color: #333333; /* default text colour */
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .panel-container {
@@ -41,4 +44,14 @@ body {
   height: 18px;
   background: url(https://raw.githubusercontent.com/RickStrahl/jquery-resizable/master/assets/hsizegrip.png) center center no-repeat #535353;
   cursor: row-resize;
+}
+
+.panel-header {
+    background-color: #f9fafb;
+    border-bottom: 1px solid #e3e5e5;
+}
+
+.panel-header h2 {
+    color: #888888;
+    font-size: 24px;
 }
