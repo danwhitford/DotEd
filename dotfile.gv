@@ -1,0 +1,8 @@
+digraph G {
+    OR [shape=box]
+    { "SQLi" "Get credentials" } -> "Delete database"
+    { "Access to web interface" } -> "SQLi"
+    { "Use default credentials", "Beat up a sysadmin" } -> "OR" -> "Get credentials"
+    "CVE in 3rd party lib" -> "SQLi"
+ }
+ 

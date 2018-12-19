@@ -16,11 +16,13 @@
 <body>
     <h1>DOT editor</h1>
     <textarea id='mytext' cols="80" autofocus autocomplete="false" spellcheck="false">
-dinetwork {
-    "Acquire credentials" -> "Drop the database";
-    "Exploit SQLi" -> "Drop the database"
-    "Scan forms for SQLi" -> "Exploit SQLi"
-}            
+digraph G {
+    OR [shape=box]
+    { "SQLi" "Get credentials" } -> "Delete database"
+    { "Access to web interface" } -> "SQLi"
+    { "Use default credentials", "Beat up a sysadmin" } -> "OR" -> "Get credentials"
+    "CVE in 3rd party lib" -> "SQLi"
+}           
     </textarea>
     <div id="mynetwork"></div>
 

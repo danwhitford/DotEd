@@ -1,24 +1,10 @@
-import * as vis from 'vis';
+import { graphviz } from 'd3-graphviz';
+import * as d3 from 'd3';
 
-function make_graph(DOTstring: String) {
-    var parsedData = (<any>vis).network.convertDot(DOTstring);
+function make_graph(DOTstring: string) {
 
-    var data: vis.Data = {
-        nodes: parsedData.nodes,
-        edges: parsedData.edges
-    }
-
-    var options: vis.Options = parsedData.options;
-
-    // you can extend the options like a normal JSON variable:
-    options.nodes = {
-        color: 'red'
-    }
-
-    // create a network
-    var container = document.getElementById('mynetwork');
-    if (container != null) 
-        var network = new vis.Network(container, data, options);
+    graphviz("#mynetwork")        
+        .renderDot(DOTstring);
 }
 
 function update(ev: Event) {

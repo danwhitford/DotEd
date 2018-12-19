@@ -4,7 +4,11 @@
   "description": "",
   "main": "doted.js",
   "dependencies": {
+    "@types/d3": "^5.0.1",
+    "@types/d3-graphviz": "^2.6.2",
     "@types/vis": "^4.21.9",
+    "d3": "^5.7.0",
+    "d3-graphviz": "^2.6.0",
     "vis": "^4.21.0"
   },
   "devDependencies": {
