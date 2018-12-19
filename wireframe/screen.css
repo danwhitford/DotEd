@@ -1,0 +1,44 @@
+/*
+    CSS for DotEd (Screen)
+*/
+
+body {
+    color: #333333; /* default text colour */
+}
+
+.panel-container {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid silver;
+  overflow: hidden;
+  touch-action: none; /* avoid browser level touch actions */
+}
+
+.panel-left {
+  flex: 0 0 auto;
+  min-width: 20%;
+  max-width: 80%; /* ensures the left panel can't be extended beyond viewport bounds */
+  white-space: nowrap;
+  background: #FFFFFF;
+}
+
+.splitter {
+  flex: 0 0 auto;
+  width: 18px;  
+  background: url(https://raw.githubusercontent.com/RickStrahl/jquery-resizable/master/assets/vsizegrip.png) center center no-repeat #535353;
+  min-height: 200px;
+  cursor: col-resize;  
+}
+
+.panel-right {
+  flex: 1 1 auto;
+  width: 100%;
+  background: #f9fafb;
+}
+
+.splitter-horizontal {
+  flex: 0 0 auto;
+  height: 18px;
+  background: url(https://raw.githubusercontent.com/RickStrahl/jquery-resizable/master/assets/hsizegrip.png) center center no-repeat #535353;
+  cursor: row-resize;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DotEd</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="screen.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://rawgit.com/RickStrahl/jquery-resizable/master/src/jquery-resizable.js"></script>
+    <script src="resizeable.js"></script>
+</head>
+<body>
+<div class="page-container">
+    <div class="panel-container">
+        <div class="panel-left">
+            <div class="panel-header">
+                <h2>Code Editor</h2>
+            </div>
+        </div>
+        <div class="splitter"></div>
+        <div class="panel-right">
+            <div class="panel-header">
+                <h2>Attack Tree</h2>
+            </div>
+        </div>
+    </div>
+</div>
+    <script>
+        $('.panel-left').resizable({
+            handleSelector: '.splitter',
+            resizeHeight: false
+        });
+        $('.panel-top').resizable({
+            handleSelector: '.splitter-horizontal',
+            resizeWidth: false
+        });
+    </script>
+</body>
+</html>
