@@ -4,6 +4,9 @@ import * as d3 from 'd3';
 function make_graph(DOTstring: string) {
 
     graphviz("#mynetwork")        
+        .fit(true)
+        .width(600)
+        .height(400)
         .renderDot(DOTstring);
 }
 
