@@ -27,9 +27,10 @@ body {
 
 .splitter {
   flex: 0 0 auto;
-  width: 18px;  
-  background: url(https://raw.githubusercontent.com/RickStrahl/jquery-resizable/master/assets/vsizegrip.png) center center no-repeat #535353;
-  min-height: 200px;
+  width: 5px;  
+  /*background: url(https://raw.githubusercontent.com/RickStrahl/jquery-resizable/master/assets/vsizegrip.png) center center no-repeat #535353;*/
+  background-color: #248fd5;
+  height: auto;
   cursor: col-resize;  
 }
 
@@ -37,13 +38,6 @@ body {
   flex: 1 1 auto;
   width: 100%;
   background: #f9fafb;
-}
-
-.splitter-horizontal {
-  flex: 0 0 auto;
-  height: 18px;
-  background: url(https://raw.githubusercontent.com/RickStrahl/jquery-resizable/master/assets/hsizegrip.png) center center no-repeat #535353;
-  cursor: row-resize;
 }
 
 .panel-header {
@@ -60,4 +54,16 @@ body {
     font-weight: 400;
     margin: 20px;
     padding: 0;
+}
+
+.panel-content {
+    margin: 0 8px 0 0; /* Margin right to account for splitter */
+    height: 100%;
+}
+
+.panel-content .code-editor {
+    width: 100%;
+    min-height: 300px;
+    border: none;
+    resize: none;
 }

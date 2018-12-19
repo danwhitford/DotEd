@@ -22,6 +22,17 @@
                     <button type="button">Export</button>
                 </div>
             </div>
+            <div class="panel-content">
+                <textarea class="code-editor" id='mytext' autofocus autocomplete="false" spellcheck="false">
+digraph G {
+    OR [shape=box]
+    { "SQLi" "Get credentials" } -> "Delete database"
+    { "Access to web interface" } -> "SQLi"
+    { "Use default credentials", "Beat up a sysadmin" } -> "OR" -> "Get credentials"
+    "CVE in 3rd party lib" -> "SQLi"
+}           
+                </textarea>
+            </div>
         </div>
         <div class="splitter"></div>
         <div class="panel-right">
