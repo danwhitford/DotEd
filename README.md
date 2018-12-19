@@ -4,6 +4,6 @@
 
 `npm install`
 
-`gulp`
+`npm start`
 
 This should open a web browser pointed at `localhost:8000`.
