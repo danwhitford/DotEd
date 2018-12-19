@@ -27,9 +27,10 @@ body {
 
 .splitter {
   flex: 0 0 auto;
-  width: 5px;  
-  /*background: url(https://raw.githubusercontent.com/RickStrahl/jquery-resizable/master/assets/vsizegrip.png) center center no-repeat #535353;*/
-  background-color: #248fd5;
+  width: 57px;  
+  background: url(img/splitter.png) center center no-repeat;
+  border-left: 1px solid #e3e5e5;
+  border-right: 1px solid #e3e5e5;
   height: auto;
   cursor: col-resize;  
 }
