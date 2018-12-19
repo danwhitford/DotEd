@@ -19,7 +19,7 @@ body {
 
 .panel-left {
   flex: 0 0 auto;
-  min-width: 20%;
+  min-width: 350px;
   max-width: 80%; /* ensures the left panel can't be extended beyond viewport bounds */
   white-space: nowrap;
   background: #FFFFFF;
@@ -49,6 +49,9 @@ body {
 .panel-header {
     background-color: #f9fafb;
     border-bottom: 1px solid #e3e5e5;
+    display: flex;
+    align-items: center;
+    justify-content: left;
 }
 
 .panel-header h2 {
