@@ -5,6 +5,7 @@
 function dan_make_graph(DOTstring) {
 
     var w = document.getElementById('mynetwork').getBoundingClientRect().width;
+    var h = document.getElementById('mynetwork').getBoundingClientRect().height;
 
     d3.select("#mynetwork")
         .graphviz()
