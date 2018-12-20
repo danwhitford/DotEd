@@ -1,23 +1,27 @@
 <html>
 <head>
 
-    <style type="text/css">
-        #mynetwork {
-            width: 600px;
-            height: 400px;
-            border: 1px solid lightgray;
-            display: inline-block;
-        }
-        #mytext {
-            height: 400px;
-        }
-    </style>
+<!--
+<style type="text/css">
+    #mynetwork {
+        width: 600px;
+        height: 400px;
+        border: 1px solid lightgray;
+        display: inline-block;
+        resize: both;
+    }
+    #mytext {
+        height: 400px;
+        resize: none;
+    }
+</style>
+-->
+
 </head>
 <body>
     <h1>DOT editor</h1>
     <textarea id='mytext' cols="80" autofocus autocomplete="false" spellcheck="false">
 digraph G {
-    OR [shape=box]
     { "SQLi" "Get credentials" } -> "Delete database"
     { "Access to web interface" } -> "SQLi"
     { "Use default credentials", "Beat up a sysadmin" } -> "OR" -> "Get credentials"
@@ -26,6 +30,9 @@ digraph G {
     </textarea>
     <div id="mynetwork"></div>
 
-    <script type="text/javascript" src="bundle.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://unpkg.com/viz.js@1.8.2/viz.js"></script>
+    <script src="https://unpkg.com/d3-graphviz@2.6.0/build/d3-graphviz.js"></script> 
+    <script type="text/javascript" src="scripts/doted.js"></script>
 </body>
 </html>
