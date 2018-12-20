@@ -4,14 +4,12 @@ function dan_make_graph(DOTstring) {
 
     const w = document.getElementById('mynetwork').getBoundingClientRect().width;
 
-    const gv = d3.select("#mynetwork")
-        .graphviz();
-
-    gv.width(w)
-    gv.fit(true)
-    gv.zoom(false);
-
-    gv.renderDot(DOTstring);
+    d3.select("#mynetwork")
+        .graphviz() 
+            .width(w)
+            .fit(true)
+            .zoom(false)
+                .renderDot(DOTstring);
 
 }
 
