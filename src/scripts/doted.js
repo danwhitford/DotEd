@@ -4,7 +4,11 @@
 
 function dan_make_graph(DOTstring) {
 
-    var w = document.getElementById('mynetwork').getBoundingClientRect().width;
+    var total = document.getElementById('flex-container').offsetWidth;
+    var left = document.getElementById('inner-left').getBoundingClientRect().right;
+    var w = total - left;
+
+    console.log(total, left,)
 
     d3.select("#mynetwork")
         .graphviz()
