@@ -4,21 +4,29 @@
     align-items: stretch;
 }
 
+#inner-left {
+    border: 1px solid black;
+}
+
 #inner-left textarea {
     width: 400px;
     height: 400px;
     min-width: 200px;
     min-height: 200px;
+    border: none;
+    /* resize: horizontal; */
 }
 
 #inner-right {
     flex-grow: 1;
+    border: 1px solid black;
 }
 
 .title-area {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px solid black;
 
 }
 
