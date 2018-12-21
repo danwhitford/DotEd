@@ -41,3 +41,30 @@ body {
     margin-right: 10px;
     margin-left: 10px;
 }
+
+.buttons button {
+    background-color: #e0e1e2; /* Green */
+    border: none;
+    color: #4c4c4c;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 3px;
+    padding: 8px 10px;
+    margin: 0 3px;
+}
+
+.buttons button:hover {
+    cursor: pointer;
+    background-color: #63acdc;
+    color: white;
+}
+
+.buttons button:active {
+    background-color: #57a0d0;
+}
+
+.buttons button:focus {
+    outline: 0; /* Disables default browser outline when clicking down on a button */
+}
