@@ -33,3 +33,11 @@ window.onload = function () {
         dan_make_graph(mytext.value);
     }
 };
+
+window.onresize = function () {
+    var mytext = document.getElementById('mytext');
+    if (mytext !== null) {
+        mytext.oninput = update;
+        dan_make_graph(mytext.value);
+    } 
+};
