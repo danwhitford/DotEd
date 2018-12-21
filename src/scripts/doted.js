@@ -28,16 +28,19 @@ function update(ev) {
 
 window.onload = function () {
     var mytext = document.getElementById('mytext');
-    if (mytext !== null) {
-        mytext.oninput = update;
+    var redrawbutton = document.getElementById('redraw-button');
+
+    redrawbutton.onclick = function() {
         dan_make_graph(mytext.value);
-    }
+    };
+
+    mytext.oninput = update;
+    dan_make_graph(mytext.value);
 };
 
 window.onresize = function () {
     var mytext = document.getElementById('mytext');
     if (mytext !== null) {
-        mytext.oninput = update;
         dan_make_graph(mytext.value);
     } 
 };

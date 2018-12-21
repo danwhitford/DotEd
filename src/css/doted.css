@@ -6,6 +6,7 @@ body {
     display: flex;
     align-items: stretch;
     border: 1px solid black;
+    overflow-x: hidden;
 }
 
 #inner-left {
@@ -28,7 +29,7 @@ body {
 .title-area {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     border-bottom: 1px solid lightgray;
 }
 
@@ -36,6 +37,7 @@ body {
     margin-left: 10px;
 }
 
-#buttons {
+.buttons {
     margin-right: 10px;
+    margin-left: 10px;
 }
