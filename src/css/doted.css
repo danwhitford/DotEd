@@ -1,0 +1,43 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+#flex-container {
+    display: flex;
+    align-items: stretch;
+    border: 1px solid black;
+    overflow-x: hidden;
+}
+
+#inner-left {
+    border-right: 1px solid lightgray;
+    display: flex;
+    flex-direction: column;
+}
+
+#inner-left textarea {
+    min-width: 300px;
+    border: none;
+    flex-grow: 1;
+    overflow-x: scroll;
+}
+
+#inner-right {
+    flex-grow: 1;
+}
+
+.title-area {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    border-bottom: 1px solid lightgray;
+}
+
+.title-area h2 {
+    margin-left: 10px;
+}
+
+.buttons {
+    margin-right: 10px;
+    margin-left: 10px;
+}
