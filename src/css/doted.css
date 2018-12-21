@@ -1,0 +1,27 @@
+
+#flex-container {
+    display: flex;
+    align-items: stretch;
+}
+
+#inner-left textarea {
+    width: 400px;
+    height: 400px;
+    min-width: 200px;
+    min-height: 200px;
+}
+
+#inner-right {
+    flex-grow: 1;
+}
+
+.title-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#buttons {
+    margin-right: 40px;
+}
