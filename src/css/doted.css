@@ -25,6 +25,7 @@ body {
 
 #inner-right {
     flex-grow: 1;
+    background-color: #f9fafb;
 }
 
 .title-area {
@@ -69,10 +70,6 @@ body {
 
 .buttons button:focus {
     outline: 0; /* Disables default browser outline when clicking down on a button */
-}
-
-#mynetwork {
-    background-color: #f9fafb;
 }
 
 polygon {
