@@ -1,16 +1,17 @@
 body {
+    color: #333333; /* default text colour */
     font-family: 'Roboto', sans-serif;
 }
 
 #flex-container {
     display: flex;
     align-items: stretch;
-    border: 1px solid black;
+    border: 1px solid silver;
     overflow-x: hidden;
 }
 
 #inner-left {
-    border-right: 1px solid lightgray;
+    border-right: 1px solid #e3e5e5;
     display: flex;
     flex-direction: column;
 }
@@ -30,7 +31,8 @@ body {
     display: flex;
     align-items: center;
     /* justify-content: space-between; */
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid #e3e5e5;
+    background-color: #f9fafb;
 }
 
 .title-area h2 {
@@ -67,4 +69,16 @@ body {
 
 .buttons button:focus {
     outline: 0; /* Disables default browser outline when clicking down on a button */
+}
+
+#mynetwork {
+    background-color: #f9fafb;
+}
+
+polygon {
+    fill: transparent;
+}
+
+.node ellipse {
+    fill: white;
 }
