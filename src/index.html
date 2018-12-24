@@ -12,35 +12,32 @@
 <body>
     <div id='flex-container'>
 
-        <div id='inner-left'>
-            <div class='title-area'>
-                <h2>DOT Ed</h2>
-                <div class='buttons'>
-                    <button>Import</button>
-                    <button>Export</button>
-                </div>
+        <div class='title-area left'>
+            <h2>DOT Ed</h2>
+            <div class='buttons'>
+                <button>Import</button>
+                <button>Export</button>
             </div>
+        </div>
 
-            <textarea id='mytext' autofocus autocomplete="false" spellcheck="false" wrap="off">
+       <textarea id='mytext' autofocus autocomplete="false" spellcheck="false" wrap="off">
 digraph G {
     { "SQLi" "Get credentials" } -> "Delete database"
     { "Access to web interface" } -> "SQLi"
     { "Use default credentials", "Beat up a sysadmin" } -> "OR" -> "Get credentials"
     "CVE in 3rd party lib" -> "SQLi"
 }           
-            </textarea>
+        </textarea>
+
+    <div class='title-area right'>
+        <h2>Graph</h2>
+        <div class='buttons'>
+            <button id='redraw-button'>Redraw</button>
+        </div>
     </div>
 
     <div id='inner-right'>
-        <div class='title-area'>
-            <h2>Graph</h2>
-            <div class='buttons'>
-                <button id='redraw-button'>Redraw</button>
-            </div>
-        </div>
-
         <div id="mynetwork"></div>
-
     </div>
 
     <script src="https://d3js.org/d3.v5.min.js"></script>

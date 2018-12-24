@@ -4,45 +4,47 @@ body {
 }
 
 #flex-container {
-    display: flex;
-    align-items: stretch;
+    display: grid;
     border: 1px solid silver;
     overflow-x: hidden;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    background-color: #f9fafb;
+
 }
 
-#inner-left {
-    border-right: 1px solid #e3e5e5;
-    display: flex;
-    flex-direction: column;
-}
-
-#inner-left textarea {
+#mytext {
     min-width: 300px;
     border: none;
-    flex-grow: 1;
     overflow-x: scroll;
+    border-right: 1px solid #e3e5e5;
+    grid-column-start: 1;
+    grid-row-start: 2;
 }
 
 #inner-right {
-    flex-grow: 1;
     background-color: #f9fafb;
+    grid-column-start: 2;
+    grid-row-start: 2;
 }
 
 .title-area {
-    display: flex;
-    align-items: center;
     /* justify-content: space-between; */
     border-bottom: 1px solid #e3e5e5;
-    background-color: #f9fafb;
+    grid-row: 1;
 }
 
 .title-area h2 {
     margin-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .buttons {
     margin-right: 10px;
     margin-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .buttons button {
@@ -78,4 +80,13 @@ polygon {
 
 .node ellipse {
     fill: white;
+}
+
+.left {
+    grid-column-start: 1;
+    border-right: 1px solid #e3e5e5;
+}
+
+.right {
+    grid-column-start: 2;
 }
