@@ -74,6 +74,10 @@ body {
     outline: 0; /* Disables default browser outline when clicking down on a button */
 }
 
+#mytext:focus { 
+    outline: 1px solid silver;
+}
+
 polygon {
     fill: transparent;
 }
