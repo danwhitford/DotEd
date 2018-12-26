@@ -47,5 +47,10 @@ digraph G {
     <script src="https://unpkg.com/viz.js@1.8.2/viz.js"></script>
     <script src="https://unpkg.com/d3-graphviz@2.6.0/build/d3-graphviz.min.js"></script> 
     <script type="text/javascript" src="scripts/doted.js"></script>
+    <script type="text/javascript">
+        var mytextarea = new detectResize('mytext', 500, function() {
+            dan_make_graph(mytext.value);
+        });
+    </script>
 </body>
 </html>

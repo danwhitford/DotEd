@@ -17,6 +17,46 @@ function dan_make_graph(DOTstring) {
 
 }
 
+var detectResize = (function() {
+
+    function detectResize(id, intervall, callback) {
+      this.id = id;
+      this.el = document.getElementById(this.id);
+      this.callback = callback || function(){};
+  
+      if (this.el) {
+        var self = this;
+        this.width = this.el.clientWidth;
+        this.height = this.el.clientHeight;
+  
+        this.el.addEventListener('mouseup', function() {
+          self.detectResize();
+        });
+  
+        this.el.addEventListener('keyup', function() {
+          self.detectResize();
+        });
+  
+        if(intervall) setInterval(function() {
+            self.detectResize();
+        }, intervall);
+  
+      }
+      return null;
+    }
+  
+    detectResize.prototype.detectResize = function() {
+        if (this.width != this.el.clientWidth || this.height != this.el.clientHeight) {
+          this.callback(this);
+          this.width = this.el.clientWidth;
+          this.height = this.el.clientHeight;
+        }
+    };
+  
+    return detectResize;
+  
+  })();
+
 function update(ev) {
     var target = ev.currentTarget;
     if (target !== null) {
